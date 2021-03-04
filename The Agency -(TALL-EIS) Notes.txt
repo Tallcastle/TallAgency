@@ -1,0 +1,52 @@
+	-Expanded Intelligence Service-
+
+these changes where initially crafted as part of a larger (and far more ambitious) mod.
+After loosing hundreds of hours of work due to nonsense with paradox updates corrupting my work in the past, I've elected to make a variety of smaller “bite-sized” mods broken down by theme.
+
+This should help with testing for balance and bugs, and will make these available to those interested in them without the need to tolerate other adjustments subscribers don't want in their game.
+
+These mods are to be provided for free, if you paid for it YOU HAVE BEEN RIPPED OFF!
+
+Anyone can use them in their own mod if you like, you don't need my permission to do so.
+
+If you DO use any of my work, I only ask for 2 things.
+
+1. Credit me in your mod.
+2. Friend Request, then Message me via Steam chat to let me know, I would love to see your work.
+
+	-The Mod-
+
+This mod includes changes and balance adjustments to the limited espionage system.  The number of total agents is doubled, experience gain from operative actions has been slightly increased, and the effectiveness of most missions and operations has been reduced by between 30-50%
+
+
+	Base Change Log
+	v0.1
+- Slightly increased chances of new operatives starting with 1 or more personality or basic traits
+- Number of agency upgrades needed for new operative slots reduced from 5 to 4
+- Maximum number of operatives increased from 10 to 16
+- Number of operatives that can be gained from upgraded agency increased from 1 to 8
+- Reduced base network strength loss rate by 10%
+- Strength of operative missions reduced by 10~20%
+- Strength of contribution operatives add when stacked and working together increased 10~20%
+- Slightly increased operative XP gain (10~20%)
+- Operatives now gain XP (a very small amount) from maintaining a quiet intel network
+- Radically changed how spymasters gain operatives from faction members (slight to moderate increase)
+- Slightly increased the effectiveness of overlapping radar and recon planes when accumulating Intel.
+- Added new agency branch upgrade “Internal Security” with 4 ranks
+- 'Localized Training Centers' moved to Intelligence, adjusted to ½ price and power but with 4 levels
+- Various operations reduced in strength by ~20% (steel tech, colab govern, sabotage, etc...)
+- New spy Trait: “Revolutionary” boost ideology, stage coup, & prepare collaboration gov, effects +25%
+- New Spy Trait: “Web of Lies” intel network strength gain factor +25%
+- New spy Trait: “Insurgent sabotage, strengthen resistance, & resistance contacts risk, cost, and efficiency all +/-15%
+- New spy Trait: “Scientist” Capture Cipher & Steal Blueprint risk Risk & Effectiveness +/- 15%
+
+	v0.12
+- Foreign recruitment no longer relies on 'Localized Training Centers' upgrade (Causing Bug)
+- fixed localization errors.
+
+	v0.2
+- Added x2 levels to Army/Navy/Airforce/Economy department upgrades each with additional +20% intelligence 
+- Re-named x3 agency upgrade categories (Department Upgrades, Domestic Operations, & Foreign Operations)
+- Added new agency branch upgrade “Communications Security” with 4 ranks designed to counter new department upgrade levels
+- Replaced 'Portable radios' with branch upgrade “Communications Protocol” with x2 levels each increases the mostly useless Coordinated strike effectiveness with additional +10% 'intel network strength gain factor'
+- “Illusive Gentleman” political advisor trait changed to +2 operative slots, -10% agency upgrade time, & +10% Operation Effectiveness

@@ -1,0 +1,9 @@
+﻿l_russian:
+#Russian Localisation provided by "Donald Mc'D"
+#TALL-EIS replacement Localisation
+ branch_intelligence:0 "Отделение разведки"
+ branch_defense:0 "Отделение контр-разведки"
+ branch_operation:0 "Отделение внешних операций"
+ branch_operative:0 "Отделение тренеровки персонала"
+ upgrade_training_centers:0 "Улучшенные пункты вербовки"
+ upgrade_portable_radios:0 "Миниатюризация средств радиосвязи"
