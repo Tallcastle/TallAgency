@@ -4,17 +4,37 @@
 
 #Agency Upgrades
  upgrade_internal_security:0 "Internal Security"
- upgrade_internal_security_desc:0 "§LAddressing places within our own government and military easily exploited by foreign intelligence services is the best defense against the hostile actions of enemy operatives.  By educating personnel in all fields of security, and monitoring trusted personnel for risks in areas such as financial stress, political views, or vulnerability to blackmail we can counter the efforts of our enemies."
+ upgrade_internal_security_desc:0 "§LAddressing places within our own government and military easily exploited by foreign intelligence services is the best defense against the hostile actions of enemy operatives.  By educating personnel in all fields of security, and monitoring trusted personnel for risks in areas such as financial stress, political views, or vulnerability to blackmail we can counter the efforts of our enemies.§!"
+ upgrade_civil_intel:0 "Civil Intelligence"
+ upgrade_civil_intel_desc:0 "§LNot all intelligence gathering efforts inherently target an enemy military.  Industrial development, production and excavation of strategic natural resources, changes in infrastructure, education, and even radical shifts in popular sentiment are all critical factors in a nations character in war.§!"
+ upgrade_military_intel:0 "Military Intelligence"
+ upgrade_military_intel_desc:0 "§LThe surplus or deficit of supply, the status of their military reserve, the number and character of its active or potential personnel, the character of its leadership, ability of its support, and the disposition of enemy forces.  These things we must know if we are to succeed in conflict against our opponent.§!"
+ upgrade_maritime_intel:0 "Maritime Intelligence"
+ upgrade_maritime_intel_desc:0 "§LTODO.§!"
+ upgrade_air_recon:0 "Aerial  Reconnaissance"
+ upgrade_air_recon_desc:0 "§LTODO.§!" 
+ upgrade_humint:0 "Contacts & Informants"
+ upgrade_humint_desc:0 "§LHUMINT, or Human Intelligence; intelligence gathered by means of interpersonal contact and provided by human sources.  Diplomatic reporting by accredited diplomats, first hand accounts by soldiers or refugees, reports from our own agents, or even the interrogations of POW's all contribute to HUMINT.§!"
+ upgrade_sigint:0 "Signals & Communications"
+ upgrade_sigint_desc:0 "§LCOMINT, or Communications Intelligence; intelligence-gathering by the interception of signals, either by direct communications or the analysis of signals (known as SIGINT).§!"
+ upgrade_masint:0 "Technical & Research"
+ upgrade_masint_desc:0 "§LMASINT, or Measurement and Signature Intelligence; governs a technical form of intelligence gathering, and serves to detect, track, identify or describe the distinctive characteristics of fixed or dynamic target sources.  These include scientific or technical data derived from the analysis of sensing instruments, be they radar, acoustic, or even simple practical analysis of weapons and equipment gathered from the armed forces of foreign nations.§!" 
+ upgrade_opsec:0 "Operations Security"
+ upgrade_opsec_desc:0 "§LOr OPSEC; the process of protecting individual pieces of data that could be grouped together to reveal critical information deemed essential by senior leaders.  This process includes the development of countermeasures ranging form complex security protocols, to the simple precaution of making key personnel weary of attempts at eavesdropping.§!" 
 
 #Operative Traits
  operative_revolutionary:0 "Revolutionary"
  operative_revolutionary_desc:0 "This Operative is a fearless advocate for radical, political change."
  operative_insurgent:0 "Insurgent"
- operative_insurgent_desc:0 "This Operative is a skilled guerrilla warrior, trained in the art of asymmetrical warfare."
+ operative_insurgent_desc:0 "This Operative is a skilled guerrilla warrior, trained in the art of asymmetrical battle."
  operative_scientist:0 "Scientist"
  operative_scientist_desc:0 "This Operative is highly educated, and commands a powerful intellect."
  operative_web_of_lies:0 "Web Of Lies"
  operative_web_of_lies_desc:0 "This Operative is like a spider at the center of a web.  Woven from secrets ... and lies."
+ operative_spyhunter:0 "Spy Hunter"
+ operative_spyhunter_desc:0 "This Operative is skilled at hunting and catching enemy agents."
+ operative_codebreaker:0 "Cipher Expert"
+ operative_codebreaker_desc:0 "This Operative is gifted in the use of codes and ciphers."
 
 #Leader Traits
  spymaster:0 "Spymaster"
@@ -24,6 +44,11 @@
  army_specops_instructor_2:1 "Spec-Ops Instructor\n(Expert)"
  army_specops_instructor_3:1 "Spec-Ops Instructor\n(Genius)"
  army_sniper_adherent:1 "Sniper Adherent"
+
+#Agent Ranks
+ operative_skill_3:0 "Special Agent"
+ operative_skill_4:0 "Veteran"
+ operative_skill_5:0 "Elite"
 
 #Operation Localisation
  OPERATION_TOKEN_INFILTRATE_TALL:0 "Sabotage Preparations"

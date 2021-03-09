@@ -185,7 +185,7 @@ branch_defense = {
 
 	upgrade_anti_partisan = {
 
-		picture = GFX_agency_anti_partisan
+		picture = GFX_agency_partisan
 		sound = Spy_Agency_Defense_Upgrades_Confirm
 
 		ai_will_do = {
@@ -285,7 +285,7 @@ branch_defense = {
 				factor = 2
 				OR = {
 					is_spymaster = yes
-					major_country = yes 
+					is_major = yes 
 					num_of_operatives > 1
 				}
 			}
@@ -329,192 +329,207 @@ branch_defense = {
 branch_operation = { #TALLeis - re-branded as "Department Expansions"
 
 	upgrade_civil_intel = {
-		picture = GFX_agency_economy_department
+		picture = GFX_agency_econ_intel
 		sound = Spy_Agency_Intel_Upgrades_Confirm
 		
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			has_done_agency_upgrade = upgrade_economy_civilian
+		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 8
 		}
 		
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				occupation_cost = -0.01
+				required_garrison_factor = -0.01
+				resistance_decay_on_our_occupied_states = -0.01
 			}
 		}
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				occupation_cost = -0.01
+				required_garrison_factor = -0.01
+				resistance_decay_on_our_occupied_states = -0.01
 			}
 		}
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				occupation_cost = -0.01
+				required_garrison_factor = -0.01
+				resistance_decay_on_our_occupied_states = -0.01
 			}
 		}
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				occupation_cost = -0.01
+				required_garrison_factor = -0.01
+				resistance_decay_on_our_occupied_states = -0.01
 			}
 		}
 	}
 	
 	upgrade_military_intel = {
-		picture = GFX_agency_army_department
+		picture = GFX_agency_army_intel
 		sound = Spy_Agency_Intel_Upgrades_Confirm
 		
 		ai_will_do = {
 			factor = 2
 		}
+
+		available = {
+			has_done_agency_upgrade = upgrade_army_department
+		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 8
 		}
 		
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				recon_factor = 0.01
+				special_forces_cap = 0.01
+				planning_speed = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				recon_factor = 0.01
+				special_forces_cap = 0.01
+				planning_speed = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				recon_factor = 0.01
+				special_forces_cap = 0.01
+				planning_speed = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				recon_factor = 0.01
+				special_forces_cap = 0.01
+				planning_speed = 0.01
 			}
 		}
 	}
 	
 	upgrade_maritime_intel = {
-		picture = GFX_agency_naval_department
+		picture = GFX_agency_navy_intel
 		sound = Spy_Agency_Intel_Upgrades_Confirm
 		
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			has_done_agency_upgrade = upgrade_naval_department
+		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 8
 		}
 		
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				naval_coordination = 0.01
+				positioning = 0.01
+				spotting_chance = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				naval_coordination = 0.01
+				positioning = 0.01
+				spotting_chance = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				naval_coordination = 0.01
+				positioning = 0.01
+				spotting_chance = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				naval_coordination = 0.01
+				positioning = 0.01
+				spotting_chance = 0.01
 			}
 		}
 	}
 	
 	upgrade_air_recon = {
-		picture = GFX_agency_airforce_department
+		picture = GFX_agency_air_intel
 		sound = Spy_Agency_Intel_Upgrades_Confirm
 
 		ai_will_do = {
 			factor = 1
 		}
+
+		available = {
+			has_done_agency_upgrade = upgrade_airforce_department
+		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 5
+			civilian_factory_use = 8
 		}
 		
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				air_intercept_efficiency = 0.01
+				air_strategic_bomber_bombing_factor = 0.01
+				air_superiority_detect_factor = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				air_intercept_efficiency = 0.01
+				air_strategic_bomber_bombing_factor = 0.01
+				air_superiority_detect_factor = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				air_intercept_efficiency = 0.01
+				air_strategic_bomber_bombing_factor = 0.01
+				air_superiority_detect_factor = 0.01
 			}
 		}
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-#TALL TODO - include <operation>_risk and <operation>_cost reductions
+				air_intercept_efficiency = 0.01
+				air_strategic_bomber_bombing_factor = 0.01
+				air_superiority_detect_factor = 0.01
 			}
 		}
 	}
 }
 
 branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
-
-#TALLeis - TECHINT branch contains entries for blueprint stealing and (partialy) invisible ink
-	upgrade_techint = {
-	
-		picture = GFX_agency_steal_blueprints
-		sound = Spy_Agency_Training_Facilities_Upgrades_Confirm
-
-		ai_will_do = {
-			factor = 1
-		}
-		
-		modifiers_during_progress = {
-			civilian_factory_use = 5
-		}
-		
-		level = {
-			modifier = {
-				operation_steal_tech_outcome = 0.15
-				operation_steal_tech_risk = -0.15
-				operation_steal_tech_cost = -0.15
-				defense_impact_on_blueprint_stealing = -0.10
-			}
-		}
-		
-		level = {
-			modifier = {
-				operation_steal_tech_outcome = 0.10
-				operation_steal_tech_risk = -0.10
-				operation_steal_tech_cost = -0.10
-				defense_impact_on_blueprint_stealing = -0.05
-			}
-		}
-	}
 
 #TALLeis - HUMINT branch contains entries for diplomatic training, psychological warfare & (partaly) invisible Ink	
 	upgrade_humint = {
@@ -527,15 +542,15 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			civilian_factory_use = 5
 		}
 		
 		level = {
 			modifier = {
-				control_trade_mission_factor = 0.15
-				diplomatic_pressure_mission_factor = 0.15
-				propaganda_mission_factor = 0.15
-				boost_ideology_mission_factor = 0.15
+				control_trade_mission_factor = 0.10
+				diplomatic_pressure_mission_factor = 0.10
+				propaganda_mission_factor = 0.10
+				boost_ideology_mission_factor = 0.10
 				intel_from_operatives_factor = 0.1
 			}
 		}
@@ -546,6 +561,15 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 				diplomatic_pressure_mission_factor = 0.10
 				propaganda_mission_factor = 0.10
 				boost_ideology_mission_factor = 0.10
+			}
+		}
+
+		level = {
+			modifier = {
+				control_trade_mission_factor = 0.05
+				diplomatic_pressure_mission_factor = 0.05
+				propaganda_mission_factor = 0.05
+				boost_ideology_mission_factor = 0.05
 				intel_from_operatives_factor = 0.1
 			}
 		}
@@ -563,7 +587,7 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 				factor = 2
 				OR = {
 					is_spymaster = yes
-					major_country = yes 
+					is_major = yes
 				}
 			}
 		}
@@ -573,17 +597,14 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		}
 
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			civilian_factory_use = 5
 		}
 		
 		level = {
 			modifier = {
 				operation_coordinated_strike_outcome = 0.5
 				intel_network_gain_factor = 0.1
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				decryption_power = 5
 			}
 		}
 
@@ -591,10 +612,7 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 			modifier = {
 				operation_coordinated_strike_outcome = 0.5
 				intel_network_gain_factor = 0.1
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				decryption_power = 5
 			}
 		}
 
@@ -602,10 +620,7 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 			modifier = {
 				operation_coordinated_strike_outcome = 0.5
 				intel_network_gain_factor = 0.1
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				decryption_power = 5
 			}
 		}
 
@@ -613,17 +628,13 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 			modifier = {
 				operation_coordinated_strike_outcome = 0.5
 				intel_network_gain_factor = 0.1
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				decryption_power = 5
 			}
 		}
 	}
-}
 
-#TALLeis - OPSEC branch contains entries from suicide pills along with other new entries
-	upgrade_opsec = {
+#TALLeis - MASINT branch contains entries for blueprint stealing and (partialy) invisible ink
+	upgrade_masint = {
 	
 		picture = GFX_agency_steal_blueprints
 		sound = Spy_Agency_Training_Facilities_Upgrades_Confirm
@@ -638,21 +649,69 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		
 		level = {
 			modifier = {
+				operation_steal_tech_outcome = 0.15
+				operation_steal_tech_risk = -0.15
+				defense_impact_on_blueprint_stealing = -0.15
+			}
+		}
+		
+		level = {
+			modifier = {
+				operation_steal_tech_outcome = 0.10
+				operation_steal_tech_risk = -0.10
+				defense_impact_on_blueprint_stealing = -0.1
+			}
+		}
+	}
+
+#TALLeis - OPSEC branch contains entries from suicide pills along with other new entries
+	upgrade_opsec = {
+	
+		picture = GFX_agency_opsec
+		sound = Spy_Agency_Training_Facilities_Upgrades_Confirm
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		modifiers_during_progress = {
+			civilian_factory_use = 5
+		}
+		
+		level = {
+			modifier = {
 				own_operative_detection_chance = -0.05
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
 			}
 		}
 		
 		level = {
 			modifier = {
 				own_operative_detection_chance = -0.05
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
+			}
+		}
+		
+		level = {
+			modifier = {
 				crypto_strength = 1
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
 			}
 		}
 	}
 #TALLeis - The Special Activities branch contains entries from suicide pills, plastic Explosives and Commando Training
-	upgrade_special_activities = {
+	upgrade_commando_training = {
 	
-		picture = GFX_agency_commando_training
+		picture = GFX_agency_specops
 		sound = Spy_Agency_Training_Facilities_Upgrades_Confirm
 
 		ai_will_do = {
@@ -660,7 +719,8 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 			modifier = {
 				factor = 5
 				num_of_operatives > 2
-				has_defensive_war
+				has_defensive_war = yes
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -669,25 +729,29 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		
 		level = {
 			modifier = {
-				operative_death_on_capture_chance = 0.05
+				operation_outcome = 0.1
 				target_sabotage_factor = 0.15
 				boost_resistance_factor = 0.15
-				commando_trait_chance_factor = 0.5 # +50%
+				operative_death_on_capture_chance = 0.05
+			}
+			complete_effect = {
+				hidden_effect = {
+					set_country_flag = upgrade_linguistic_training_flag
+				}
 			}
 		}
 		
 		level = {
 			modifier = {
-				operative_death_on_capture_chance = 0.05
 				target_sabotage_factor = 0.10
 				boost_resistance_factor = 0.10
-				commando_trait_chance_factor = 0.5 # +50%
+				commando_trait_chance_factor = 1 # +100%
+				operative_death_on_capture_chance = 0.05
 			}
-			complete_effect = {
-				hidden_effect = {
-					set_country_flag = upgrade_linguistic_training_flag
+
 		}
 	}
+}
 
 branch_crypto = {
 	
@@ -867,7 +931,6 @@ branch_crypto = {
 ################################
 
 #The below branches are original agency upgrades, these have been replaced, and are listed here for refrence
-
 
 #branch_intelligence = { #The first category has been re-branded as “Department Upgrades”
 	#all contained branch upgrades within are (for the most part) included within the core mod and remain mostly unchanged 

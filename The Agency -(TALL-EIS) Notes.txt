@@ -50,3 +50,6 @@ This mod includes changes and balance adjustments to the limited espionage syste
 - Added new agency branch upgrade “Communications Security” with 4 ranks designed to counter new department upgrade levels
 - Replaced 'Portable radios' with branch upgrade “Communications Protocol” with x2 levels each increases the mostly useless Coordinated strike effectiveness with additional +10% 'intel network strength gain factor'
 - “Illusive Gentleman” political advisor trait changed to +2 operative slots, -10% agency upgrade time, & +10% Operation Effectiveness
+
+	v0.3
+PENDING
