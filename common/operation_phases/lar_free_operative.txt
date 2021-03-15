@@ -8,8 +8,9 @@ free_operative_free_in_transit = {
 	requirements = {  }
 
 	equipment = {
-#TALL-EIS - original value = 200
-		infantry_equipment = 160
+#TALL-EIS - original value (inf equip) = 200
+		infantry_equipment = 40
+		support_equipment = 20
 	}
 }
 
@@ -22,7 +23,8 @@ free_operative_liberate_camp = {
 	
 	equipment = {
 #TALL-EIS - original value = 200
-		infantry_equipment = 160
+		infantry_equipment = 80
+		support_equipment = 20
 	}
 }
 
@@ -35,7 +37,7 @@ free_operative_smuggle_in_escape_gear = {
 	
 	equipment = {
 #TALL-EIS - original value = 50
-		support_equipment = 40
+		support_equipment = 30
 	}
 }
 

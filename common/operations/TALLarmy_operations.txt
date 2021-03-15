@@ -5,7 +5,9 @@
 
 #TALLeis - All Army spacific Operations
 #Token Generating Operations = 1 of 1
-#Civilian/Industrial Operations = 1 of 5
+#Civilian/Industrial Operations = 3 of 5
+#the planed "Gather Military Intel" mission has been abandoned for the foreseeable future
+#the planed "Sabotage Equipment Stockpile" mission is also abandoned but may be resurrected in future versions
 
 	###################################
 	### Token Generating Operations ###
@@ -359,11 +361,8 @@ operation_blow_fuel = { ### 18 2/35
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-
-		has_operation_token = {
-			tag = FROM
 			token = token_army
+			token = token_prep_sabotage
 		}
 
 		FROM = {
@@ -372,8 +371,6 @@ operation_blow_fuel = { ### 18 2/35
 	}
 
 	requirements = {
-		has_war_with = FROM
-
 		has_operation_token = {
 			tag = FROM
 			token = token_prep_sabotage

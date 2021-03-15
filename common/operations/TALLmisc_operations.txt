@@ -4,7 +4,7 @@
 ### eg. 1/70 comes before 2/40
 
 #TALLeis - All miscellaneous Operations
-#Miscellaneous Operations = 2 of 3
+#Miscellaneous Operations = 3 of 3
 
 	################################
 	### Miscellaneous Operations ###
@@ -448,6 +448,8 @@ operation_coordinated_strike = { ### 11 2/70
 			target = FROM
 			value > 35
 		}
+		has_wargoal_against = FROM
+		can_declare_war_on = FROM
 		NOT = {
 			has_war_with = FROM
 		}

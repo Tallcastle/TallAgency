@@ -108,12 +108,12 @@ guiTypes = {
 		buttonType = {
 			name = "close_button"
 			position = {x=315 y=288}
-			spriteType = "GFX_spymaster_button"
+			spriteType = "GFX_tokencount_button"
 			clicksound = click_default
 			oversound = ui_menu_over 
 			buttonFont = "hoi_18mbs" 
-			buttonText = "Foreign Assets"
-			pdx_tooltip = "Foreign Assets"
+			buttonText = "INTEL_FOREIGN_ASSETS"
+			pdx_tooltip = "INTEL_FOREIGN_ASSETS"
 		}
 	}
 }

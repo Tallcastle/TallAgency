@@ -1,49 +1,43 @@
 # List of intelligence agency upgrades, and their effects
 # For documentation, there is a file _documentation.info in the same folder.
 
-#below are effects of all intel agency upgrades for vanila game
-#
-#-5-			civilian_intel_factor = 					0.25		/(A) 0.65
-#-5-			army_intel_factor = 						0.25		/(A) 0.65
-#-5-			navy_intel_factor = 						0.25		/(A) 0.65
-#-5-			airforce_intel_factor = 					0.25		/(A) 0.65
+#	is_spymaster = yes
+#	is_major = yes 
+#	num_of_operatives > 1
+#	is_in_faction = yes
+#	is_faction_leader = yes
+#	any_owned_state = {	resistance > 0	}
+#	has_done_agency_upgrade = upgrade_army_department
+#	has_defensive_war = yes
+#	has_offensive_war = yes
+#	has_war = yes
+#	threat > 30
+#	agency_upgrade_number > 4
+# 	num_of_civilian_factories > 10
+#	num_of_available_civilian_factories > 10
+#	num_of_civilian_factories_available_for_projects > 10
+#	any_neighbor_country = { has_stability > 0.8 }
+#	any_claim = yes
+#	is_island_state = yes
 
-#-4-			boost_ideology_mission_factor = 			0.25		/(C)0.25
-#-4-			boost_resistance_factor = 					0.25		/(C)0.25
-#-5-			commando_trait_chance_factor = 				1 # +100%	/(C)1
-#-2.5-			control_trade_mission_factor = 				0.25		/(C)0.25
-#-2.5-			diplomatic_pressure_mission_factor = 		0.25		/(C)0.25
-#-3.3-			enemy_operative_recruitment_chance = 		0.25		/(A)0.4	
-#-2.5-			enemy_operative_capture_chance_factor = 	1 # +100%	/
-#-2.5-			enemy_operative_intel_extraction_rate = 	0.25 #+25%	/
-#-2.5-			intel_from_operatives_factor = 				0.2			/(C)0.2
-#-20-			intelligence_agency_defense = 				4.75		/(C)4.75 
-#-3.3-			new_operative_slot_bonus = 					1			/(A)4
-#-3.3-			occupied_operative_recruitment_chance = 	0.25		/(A)0.6
-#-5-			operation_steal_tech_outcome = 				0.25		/(C)0.25
-#-2.5-			operation_steal_tech_risk = 				-0.25		/(C)-0.25
-#-8-			operation_coordinated_strike_outcome = 		1			/(A)2
-#-2.5-			operative_death_on_capture_chance = 		0.1			/(C)0.1
-#-2.5-			own_operative_detection_chance = 			-0.05		/(A)-0.1
-#-4-			propaganda_mission_factor = 				0.25		/(C)0.25
-#-10-			root_out_resistance_effectiveness_factor = 	0.5			/(C)0.5
-#-4-			target_sabotage_factor = 					0.25		/(C)0.25
-#
-#TALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALLTALL
-#
-#-20-			enemy_intel_network_gain_factor_over_occupied_tag = 	-0.4
-#-3-			operation_steal_tech_cost = 							-0.25		
-#				intel_network_gain_factor = 							0.4
-#				airforce_intel_to_others = 								-40
-#				civilian_intel_to_others = 								-40
-#				navy_intel_to_others = 									-40
-#				army_intel_to_others = 									-40
-#				crypto_strength = 										1
-#
-#
-#
-#
-#
+#	any_state = {
+#		is_coastal = yes
+#	}
+
+
+#	modifier = {
+#		factor = temp 
+#		set_temp_variable = { temp = num_occupied_states }
+#		divide_temp_variable = { temp = 10 }
+#		add_to_temp_variable = { temp = 1 }
+#	}
+
+#	modifier = {
+#		factor = temp
+#		set_temp_variable = { temp = num_of_operatives }
+#	}
+
+
 #TALL unused Assets
 #		picture = GFX_agency_communications_security
 
@@ -56,7 +50,32 @@ branch_intelligence = {
 		sound = Spy_Agency_Intel_Upgrades_Confirm
 	
 		ai_will_do = {
-			factor = 1
+			factor = 2
+
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 	
 		modifiers_during_progress = {
@@ -78,6 +97,40 @@ branch_intelligence = {
 		
 		ai_will_do = {
 			factor = 2
+
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 30
+				}
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -99,6 +152,49 @@ branch_intelligence = {
 		
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					any_controlled_state = {
+						OR = {
+							is_coastal = yes
+							is_island_state = yes
+						}
+					}
+					threat > 40
+				}
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				any_controlled_state = {
+					is_coastal = no
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -120,6 +216,40 @@ branch_intelligence = {
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 40
+				}
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -150,6 +280,26 @@ branch_defense = {
 					is_spymaster = yes 
 					is_faction_leader = yes 
 				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 40
+				}
+			}
+			modifier = {
+				factor = 0.2
+				num_of_civilian_factories_available_for_projects < 10
 			}
 		}
 		
@@ -189,9 +339,9 @@ branch_defense = {
 		sound = Spy_Agency_Defense_Upgrades_Confirm
 
 		ai_will_do = {
-			factor = 4
+			factor = 1
 			modifier = {
-				factor = 0.25
+				factor = 4
 				NOT = {
 					any_owned_state = {
 						resistance > 0
@@ -203,6 +353,10 @@ branch_defense = {
 				set_temp_variable = { temp = num_occupied_states }
 				divide_temp_variable = { temp = 10 }
 				add_to_temp_variable = { temp = 1 }
+			}
+			modifier = {
+				factor = 0.5
+				num_of_civilian_factories_available_for_projects < 10
 			}
 		}
 		
@@ -233,6 +387,31 @@ branch_defense = {
 			modifier = {
 				factor = temp
 				set_temp_variable = { temp = num_of_operatives }
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_spymaster = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					threat > 50
+					is_major = yes
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
 			}
 		}
 		
@@ -280,13 +459,31 @@ branch_defense = {
 		Sound = Spy_Agency_Training_Facilities_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 2
+			factor = 1
 			modifier = {
 				factor = 2
+				is_spymaster = yes
+			}
+			modifier = {
+				factor = temp
+				set_temp_variable = { temp = num_of_operatives }
+			}
+			modifier = {
+				factor = 1.5
 				OR = {
-					is_spymaster = yes
-					is_major = yes 
-					num_of_operatives > 1
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
 				}
 			}
 		}
@@ -334,6 +531,31 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 
 		available = {
@@ -347,33 +569,45 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-				occupation_cost = -0.01
-				required_garrison_factor = -0.01
-				resistance_decay_on_our_occupied_states = -0.01
+				fascism_acceptance = 2
+				communism_acceptance = 2
+				democratic_acceptance = 2
+				neutrality_acceptance = 2
+				lend_lease_tension = -0.05
+				consumer_goods_factor = -0.01
 			}
 		}
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-				occupation_cost = -0.01
-				required_garrison_factor = -0.01
-				resistance_decay_on_our_occupied_states = -0.01
+				fascism_acceptance = 2
+				communism_acceptance = 2
+				democratic_acceptance = 2
+				neutrality_acceptance = 2
+				lend_lease_tension = -0.05
+				consumer_goods_factor = -0.01
 			}
 		}
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-				occupation_cost = -0.01
-				required_garrison_factor = -0.01
-				resistance_decay_on_our_occupied_states = -0.01
+				fascism_acceptance = 2
+				communism_acceptance = 2
+				democratic_acceptance = 2
+				neutrality_acceptance = 2
+				lend_lease_tension = -0.05
+				consumer_goods_factor = -0.01
 			}
 		}
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-				occupation_cost = -0.01
-				required_garrison_factor = -0.01
-				resistance_decay_on_our_occupied_states = -0.01
+				fascism_acceptance = 2
+				communism_acceptance = 2
+				democratic_acceptance = 2
+				neutrality_acceptance = 2
+				lend_lease_tension = -0.05
+				consumer_goods_factor = -0.01
 			}
 		}
 	}
@@ -383,7 +617,41 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		sound = Spy_Agency_Intel_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 2
+			factor = 1
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 50
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 
 		available = {
@@ -397,33 +665,33 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-				recon_factor = 0.01
+				max_planning = 0.02
 				special_forces_cap = 0.01
-				planning_speed = 0.01
+				planning_speed = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-				recon_factor = 0.01
+				max_planning = 0.02
 				special_forces_cap = 0.01
-				planning_speed = 0.01
+				planning_speed = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-				recon_factor = 0.01
+				max_planning = 0.02
 				special_forces_cap = 0.01
-				planning_speed = 0.01
+				planning_speed = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				army_intel_factor = 0.1
-				recon_factor = 0.01
+				max_planning = 0.02
 				special_forces_cap = 0.01
-				planning_speed = 0.01
+				planning_speed = 0.02
 			}
 		}
 	}
@@ -434,6 +702,50 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					any_controlled_state = {
+						OR = {
+							is_coastal = yes
+							is_island_state = yes
+						}
+					}
+					threat > 40
+				}
+			}
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				any_controlled_state = {
+					is_coastal = no
+				}
+			}
+
 		}
 
 		available = {
@@ -447,33 +759,33 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-				naval_coordination = 0.01
-				positioning = 0.01
-				spotting_chance = 0.01
+				naval_coordination = 0.02
+				positioning = 0.02
+				spotting_chance = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-				naval_coordination = 0.01
-				positioning = 0.01
-				spotting_chance = 0.01
+				naval_coordination = 0.02
+				positioning = 0.02
+				spotting_chance = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-				naval_coordination = 0.01
-				positioning = 0.01
-				spotting_chance = 0.01
+				naval_coordination = 0.02
+				positioning = 0.02
+				spotting_chance = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				navy_intel_factor = 0.1
-				naval_coordination = 0.01
-				positioning = 0.01
-				spotting_chance = 0.01
+				naval_coordination = 0.02
+				positioning = 0.02
+				spotting_chance = 0.02
 			}
 		}
 	}
@@ -484,6 +796,40 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 40
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 
 		available = {
@@ -497,33 +843,33 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-				air_intercept_efficiency = 0.01
+				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
-				air_superiority_detect_factor = 0.01
+				air_superiority_detect_factor = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-				air_intercept_efficiency = 0.01
+				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
-				air_superiority_detect_factor = 0.01
+				air_superiority_detect_factor = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-				air_intercept_efficiency = 0.01
+				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
-				air_superiority_detect_factor = 0.01
+				air_superiority_detect_factor = 0.02
 			}
 		}
 		level = {
 			modifier = {
 				airforce_intel_factor = 0.1
-				air_intercept_efficiency = 0.01
+				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
-				air_superiority_detect_factor = 0.01
+				air_superiority_detect_factor = 0.02
 			}
 		}
 	}
@@ -539,6 +885,30 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+					is_major = yes
+					num_of_civilian_factories_available_for_projects > 15
+				}
+			}
+			modifier = {
+				factor = temp
+				set_temp_variable = { temp = num_of_operatives }
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -583,11 +953,32 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		
 		ai_will_do = {
 			factor = 2
+
 			modifier = {
 				factor = 2
 				OR = {
-					is_spymaster = yes
+					has_war = yes 
+					threat > 50
+				}
+			}
+
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
 					is_major = yes
+					num_of_civilian_factories_available_for_projects > 15
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
 				}
 			}
 		}
@@ -672,6 +1063,40 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 2
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+					is_major = yes
+					num_of_civilian_factories_available_for_projects > 15
+				}
+			}
+			modifier = {
+				factor = temp
+				set_temp_variable = { temp = num_of_operatives }
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 40
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		modifiers_during_progress = {
@@ -716,10 +1141,39 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 
 		ai_will_do = {
 			factor = 1
+
 			modifier = {
-				factor = 5
+				factor = 1.5
 				num_of_operatives > 2
-				has_defensive_war = yes
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+					is_major = yes
+					num_of_civilian_factories_available_for_projects > 15
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					any_neighbor_country = {
+						has_war = yes
+					}
+					threat > 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
 			}
 		}
 		
@@ -762,12 +1216,40 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 2
+			factor = 3
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 20
+					is_major = yes
+				}
+			}
+
 			modifier = {
 				factor = 2
 				OR = {
 					has_war = yes 
 					threat > 30
+				}
+			}
+
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 15
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
 				}
 			}
 		}
@@ -792,7 +1274,42 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 3
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_war = yes 
+					threat > 30
+				}
+			}
+
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		available = {
@@ -827,7 +1344,42 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 3
+			factor = 1
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 20
+					is_major = yes
+				}
+			}
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_war = yes 
+					threat > 30
+				}
+			}
+
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 15
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		available = {
@@ -865,7 +1417,42 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 3
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 15
+					is_major = yes
+				}
+			}
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_war = yes 
+					threat > 30
+				}
+			}
+
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 10
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		available = {
@@ -895,7 +1482,42 @@ branch_crypto = {
 		sound = Spy_Agency_Cryptology_Upgrades_Confirm
 		
 		ai_will_do = {
-			factor = 3
+			factor = 1
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					is_spymaster = yes 
+					is_faction_leader = yes
+				}
+			}
+
+			modifier = {
+				factor = 1.5
+				OR = {
+					num_of_civilian_factories_available_for_projects > 20
+					is_major = yes
+				}
+			}
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_war = yes 
+					threat > 30
+				}
+			}
+
+			modifier = {
+				factor = 0.2
+				OR = {
+					num_of_civilian_factories_available_for_projects < 15
+					AND = {
+						is_subject = yes
+						is_spymaster = no
+					}
+				}
+			}
 		}
 		
 		available = {

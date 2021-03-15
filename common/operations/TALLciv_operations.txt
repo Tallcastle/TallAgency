@@ -5,7 +5,9 @@
 
 #TALLeis - All Civ spacific Operations
 #Token Generating Operations = 1 of 1
-#Civilian/Industrial Operations = 1 of 7
+#Civilian/Industrial Operations = 6 of 9
+#the planed "Gather Industry Intel" mission has been abandoned for the foreseeable future
+#the planed "Sabotage Nuclear Plant" and “Sabotage Rocket Site” missions are also abandoned but may be resurrected in future versions
 
 	###################################
 	### Token Generating Operations ###
@@ -309,7 +311,7 @@ operation_coup_government = { ### 7 1/70
 	}
 
 	equipment = {
-		infantry_equipment = 10000 #TALL original  = 12000
+		infantry_equipment = 6000 #TALL original  = 12000
 	}
 	# Cannot spawn a civil war in the capital
 	selection_target_state = {
@@ -743,11 +745,7 @@ operation_targeted_sabotage_industry = { ### 13 3/35
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-		FROM = {
-			any_controlled_state = {
-				has_resistance = yes
-			}
+			token = token_prep_sabotage
 		}
 	}
 
@@ -773,8 +771,9 @@ operation_targeted_sabotage_industry = { ### 13 3/35
 	}
 
 	required_tokens = { token_prep_sabotage }
+
 	equipment = {
-		
+		support_equipment = 40
 	}
 
 	risk_chance = 0.2
@@ -889,11 +888,7 @@ operation_targeted_sabotage_infrastructure = { ### 14 3/35
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-		FROM = {
-			any_controlled_state = {
-				has_resistance = yes
-			}
+			token = token_prep_sabotage
 		}
 	}
 
@@ -918,8 +913,9 @@ operation_targeted_sabotage_infrastructure = { ### 14 3/35
 	}
 
 	required_tokens = { token_prep_sabotage }
+
 	equipment = {
-		
+		support_equipment = 40
 	}
 	risk_chance = 0.2
 	experience = 4 #TALL original value = 2
@@ -1034,11 +1030,7 @@ operation_targeted_sabotage_resources = { ### 15 3/35
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-		FROM = {
-			any_controlled_state = {
-				has_resistance = yes
-			}
+			token = token_prep_sabotage
 		}
 	}
 	
@@ -1062,8 +1054,9 @@ operation_targeted_sabotage_resources = { ### 15 3/35
 		targets = { FROM }
 	}
 	required_tokens = { token_prep_sabotage }
+	
 	equipment = {
-		
+		support_equipment = 40
 	}
 	risk_chance = 0.2
 	experience = 4 #TALL original value = 2

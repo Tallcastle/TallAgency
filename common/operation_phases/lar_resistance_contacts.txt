@@ -8,7 +8,7 @@ resistance_contacts_radio_circuits = {
 
 	equipment = {
 #TALL-EIS - original value = 150
-		support_equipment = 120
+		support_equipment = 75
 	}
 }
 
@@ -20,7 +20,7 @@ resistance_support_pidgeons = {
 	icon = "GFX_phase_resistance_support_pidgeons_small"
 	equipment = {
 #TALL-EIS - original value = 50
-		support_equipment = 40
+		support_equipment = 25
 	}
 }
 

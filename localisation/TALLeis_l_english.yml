@@ -10,9 +10,9 @@
  upgrade_military_intel:0 "Military Intelligence"
  upgrade_military_intel_desc:0 "§LThe surplus or deficit of supply, the status of their military reserve, the number and character of its active or potential personnel, the character of its leadership, ability of its support, and the disposition of enemy forces.  These things we must know if we are to succeed in conflict against our opponent.§!"
  upgrade_maritime_intel:0 "Maritime Intelligence"
- upgrade_maritime_intel_desc:0 "§LTODO.§!"
+ upgrade_maritime_intel_desc:0 "§LKnowing the numbers and disposition of enemy naval forces is critical to the success of any sea-going conflict.  Monitoring conversations between naval personnel, gathering records pertaining to fuel or munitions consumption, even the simple measure of counting number of ships at port could easily lead to the success or failure of any naval conflict.§!"
  upgrade_air_recon:0 "Aerial  Reconnaissance"
- upgrade_air_recon_desc:0 "§LTODO.§!" 
+ upgrade_air_recon_desc:0 "§LThough a relatively new aspect of warfare, the projection of air power has quickly become vital to the success of any modern military conflict.  Knowing the strength, range, ability, numbers, movement, and location of enemy air power can rapidly change the scope of any air battle.  And thereby critically shift the balance of any conflict beneath such a contested sky.§!" 
  upgrade_humint:0 "Contacts & Informants"
  upgrade_humint_desc:0 "§LHUMINT, or Human Intelligence; intelligence gathered by means of interpersonal contact and provided by human sources.  Diplomatic reporting by accredited diplomats, first hand accounts by soldiers or refugees, reports from our own agents, or even the interrogations of POW's all contribute to HUMINT.§!"
  upgrade_sigint:0 "Signals & Communications"
@@ -64,7 +64,8 @@
  TOKEN_NAVY_ICON:0 "£text_infiltrate_navy_token "
  TOKEN_RESISTANCE_ICON:0 "£text_contact_resistance_token "
  TOKEN_SABOTAGE_ICON:0 "£text_infiltrate_tall_token "
-
+ INTEL_FOREIGN_ASSETS:0 "Foreign Assets"
+ 
 #New Operations
  operation_blow_fuel:0 "Sabotage Fuel Stores"
  operation_blow_fuel_desc:0 "We will reduce our enemies ability to store Fuel, while destroying some in the process"
@@ -90,7 +91,7 @@
  GER_reinhard_heydrich:0 "Reinhard Heydrich"
  ITA_cesare_ame:0 "Cesare Amè"
  ITA_paolo_aloisi:0 "Paolo Aloisi"
- JAP_hideo_iwakuro:0 "Hideo Iwakuru"
+ JAP_hideo_iwakuro:0 "Hideo Iwakuro"
  SOV_pavel_sudoplatov:0 "Pavel Sudoplatov"
  SOV_viktor_abakumov:0 "Viktor Abakumov"
  SOV_yan_karlovich_berzin:0 "Yan Karlovich Berzin"

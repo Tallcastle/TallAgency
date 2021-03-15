@@ -5,7 +5,8 @@
 
 #TALLeis - All Air spacific Operations
 #Token Generating Operations = 1 of 1
-#Air Force Targeting Operations = 0 of 4
+#Air Force Targeting Operations = 3 of 4
+#the planed "Gather Air Intel" mission has been abandoned for the foreseeable future
 
 	###################################
 	### Token Generating Operations ###
@@ -350,11 +351,8 @@ operation_targeted_sabotage_radar = {
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-
-		has_operation_token = {
-			tag = FROM
 			token = token_airforce
+			token = token_prep_sabotage
 		}
 
 		FROM = {
@@ -366,7 +364,6 @@ operation_targeted_sabotage_radar = {
 	}	
 
 	requirements = {
-		has_war_with = FROM
 
 		has_operation_token = {
 			tag = FROM
@@ -506,11 +503,8 @@ operation_targeted_sabotage_airbase = {
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-
-		has_operation_token = {
-			tag = FROM
 			token = token_airforce
+			token = token_prep_sabotage
 		}
 
 		FROM = {
@@ -522,7 +516,6 @@ operation_targeted_sabotage_airbase = {
 	}	
 
 	requirements = {
-		has_war_with = FROM
 
 		has_operation_token = {
 			tag = FROM

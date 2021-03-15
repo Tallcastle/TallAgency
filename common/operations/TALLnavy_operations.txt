@@ -5,7 +5,8 @@
 
 #TALLeis - All Navy spacific Operations
 #Token Generating Operations = 1 of 1
-#Navy Targeting Oparations = 0 of 5
+#Navy Targeting Oparations = 4 of 5
+#the planed "Gather Navy Intel" mission has been abandoned for the foreseeable future
 
 	###################################
 	### Token Generating Operations ###
@@ -414,11 +415,8 @@ operation_targeted_sabotage_dockyard = {
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-
-		has_operation_token = {
-			tag = FROM
 			token = token_navy
+			token = token_prep_sabotage
 		}
 
 		FROM = {
@@ -426,11 +424,9 @@ operation_targeted_sabotage_dockyard = {
 				dockyard > 0
 			}
 		}
-
 	}	
 
 	requirements = {
-		has_war_with = FROM
 
 		has_operation_token = {
 			tag = FROM
@@ -569,11 +565,8 @@ operation_targeted_naval_base = {
 		has_operation_token = {
 			tag = FROM
 			token = token_civilian
-		}
-
-		has_operation_token = {
-			tag = FROM
 			token = token_navy
+			token = token_prep_sabotage
 		}
 
 		FROM = {
@@ -585,7 +578,6 @@ operation_targeted_naval_base = {
 	}	
 
 	requirements = {
-		has_war_with = FROM
 
 		has_operation_token = {
 			tag = FROM
@@ -724,6 +716,7 @@ operation_blow_ship = { ### 16 3/55
 		has_operation_token = {
 			tag = FROM
 			token = token_navy
+			token = token_prep_sabotage
 		}
 		FROM = {
 			any_controlled_state = {
@@ -733,7 +726,6 @@ operation_blow_ship = { ### 16 3/55
 	}
 
 	requirements = {
-		has_war_with = FROM
 
 		has_operation_token = {
 			tag = FROM

@@ -24,27 +24,80 @@ operation_make_resistance_contacts = { ### 9 2/40
 	operatives = 2
 
 	visible = {
-		network_national_coverage = {
-			target = FROM
-			value > 0
-		}
-		FROM = {
-			any_controlled_state = {
-				has_resistance = yes
+		AND = {
+			network_national_coverage = {
+				target = FROM
+				value > 0
+			}
+
+			NOT = {
+				has_operation_token = {
+					tag = FROM
+					token = token_resistance_contacts
+				}
+			}
+
+			OR = {
+				FROM = {
+					any_controlled_state = {
+						has_resistance = yes
+					}
+				}		
+
+				FROM = {
+					any_controlled_state = {
+						is_core_of = ROOT
+					}
+				}	
+
+				FROM = {
+					AND = {
+						has_war = no
+						has_stability < 0.3
+					}
+				}
+
+				ROOT = {
+					has_war_with = FROM
+				}
+
+				ROOT = {
+					has_wargoal_against = FROM
+				}
+
+				FROM = {
+					has_civil_war = no
+					has_stability < 0.45
+					NOT = {
+						has_government = var:PREV.ROOT.current_party_ideology_group
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = fascism }
+						}
+						fascism > 0.2
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = communism }
+						}
+						communism > 0.2
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = democratic }
+						}
+						democratic > 0.2
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = neutrality }
+						}
+						neutrality > 0.2
+					}
+				}
 			}
 		}
-		NOT = {
-			has_operation_token = {
-				tag = FROM
-				token = token_resistance_contacts
-			}
-		}
-		
-		FROM = {
-			any_controlled_state = {
-				has_resistance = yes
-			}
-		}		
 	}
 
 	equipment = {
@@ -56,7 +109,11 @@ operation_make_resistance_contacts = { ### 9 2/40
 	}
 
 	selection_target_state = {
-		has_resistance = yes
+		OR = {
+			has_resistance = yes
+			any_state = { is_core_of = ROOT }
+			is_capital = yes
+		}
 	}
 
 	available = {
@@ -204,38 +261,89 @@ operation_prep_sabotage = { ### custom-agency
 	operatives = 2
 
 	visible = {
-		network_national_coverage = {
-			target = FROM
-			value > 0
-		}
+		AND = {
+			network_national_coverage = {
+				target = FROM
+				value > 0
+			}
 
-		OR = {
-			AND = {
+			has_operation_token = {
+				tag = FROM
+				token = token_resistance_contacts
+			}
+
+			NOT = {
+				has_operation_token = {
+					tag = FROM
+					token = token_prep_sabotage
+				}
+			}
+
+			OR = {
 				FROM = {
 					any_controlled_state = {
 						has_resistance = yes
 					}
 				}
-				has_operation_token = {
-					tag = FROM
-					token = token_resistance_contacts
-				}
-			}
-			AND = {
-				has_operation_token = {
-					tag = FROM
-					token = token_army
-				}
+					
 				FROM = {
-					has_war_with = ROOT
+					any_controlled_state = {
+						is_core_of = ROOT
+					}
+				}
+
+				FROM = {
+					AND = {
+						has_war = no
+						has_stability < 0.3
+					}
+				}
+				
+				ROOT = {
+					has_war_with = FROM
+				}
+
+				ROOT = {
+					has_wargoal_against = FROM
+				}
+
+				FROM = {
+					has_civil_war = no
+					has_stability < 0.45
+					NOT = {
+						has_government = var:PREV.ROOT.current_party_ideology_group
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = fascism }
+						}
+						fascism > 0.3
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = communism }
+						}
+						communism > 0.3
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = democratic }
+						}
+						democratic > 0.3
+					}
+					if = {
+						limit = {
+							PREV.ROOT = { has_government = neutrality }
+						}
+						neutrality > 0.3
+					}
 				}
 			}
 		}
 	}
 
-
 	equipment = {
-		
+		support_equipment = 40
 	}
 	
 	selection_target = {
@@ -243,7 +351,11 @@ operation_prep_sabotage = { ### custom-agency
 	}
 
 	selection_target_state = {
-		has_resistance = yes
+		OR = {
+			has_resistance = yes
+			any_state = { is_core_of = ROOT }
+			is_capital = yes
+		}
 	}
 
 	available = {
@@ -397,14 +509,22 @@ operation_boost_resistance = { ### 8 2/40
 	operatives = 1 #TALL original = 2
 
 	visible = {
-		network_national_coverage = {
-			target = FROM
-			value > 0
-		}
+		AND = {
+			network_national_coverage = {
+				target = FROM
+				value > 0
+			}
 
-		has_operation_token = {
-			tag = FROM
-			token = token_resistance_contacts
+			has_operation_token = {
+				tag = FROM
+				token = token_resistance_contacts
+			}
+
+			FROM = {
+				any_controlled_state = {
+					has_resistance = yes
+				}
+			}
 		}
 	}
 
