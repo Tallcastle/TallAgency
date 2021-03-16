@@ -1106,30 +1106,30 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		level = {
 			modifier = {
 				own_operative_detection_chance = -0.05
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				airforce_intel_to_others = -5
+				civilian_intel_to_others = -5
+				navy_intel_to_others = -5
+				army_intel_to_others = -5
 			}
 		}
 		
 		level = {
 			modifier = {
 				own_operative_detection_chance = -0.05
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				airforce_intel_to_others = -5
+				civilian_intel_to_others = -5
+				navy_intel_to_others = -5
+				army_intel_to_others = -5
 			}
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 1
-				airforce_intel_to_others = -10
-				civilian_intel_to_others = -10
-				navy_intel_to_others = -10
-				army_intel_to_others = -10
+				airforce_intel_to_others = -5
+				civilian_intel_to_others = -5
+				navy_intel_to_others = -5
+				army_intel_to_others = -5
 			}
 		}
 	}

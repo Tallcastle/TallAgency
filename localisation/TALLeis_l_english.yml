@@ -20,7 +20,7 @@
  upgrade_masint:0 "Technical & Research"
  upgrade_masint_desc:0 "§LMASINT, or Measurement and Signature Intelligence; governs a technical form of intelligence gathering, and serves to detect, track, identify or describe the distinctive characteristics of fixed or dynamic target sources.  These include scientific or technical data derived from the analysis of sensing instruments, be they radar, acoustic, or even simple practical analysis of weapons and equipment gathered from the armed forces of foreign nations.§!" 
  upgrade_opsec:0 "Operations Security"
- upgrade_opsec_desc:0 "§LOr OPSEC; the process of protecting individual pieces of data that could be grouped together to reveal critical information deemed essential by senior leaders.  This process includes the development of countermeasures ranging form complex security protocols, to the simple precaution of making key personnel weary of attempts at eavesdropping.§!" 
+ upgrade_opsec_desc:0 "§LOr OPSEC; the process of protecting individual pieces of data that could be grouped together to reveal critical information deemed essential by senior leaders.  This process includes the development of countermeasures ranging form complex security protocols, to the simple precaution of making key personnel wary of attempts at eavesdropping.§!" 
 
 #Operative Traits
  operative_revolutionary:0 "Revolutionary"
