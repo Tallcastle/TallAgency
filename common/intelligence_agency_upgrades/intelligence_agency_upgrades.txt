@@ -569,43 +569,31 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		level = {
 			modifier = {
 				civilian_intel_factor = 0.1
-				fascism_acceptance = 2
-				communism_acceptance = 2
-				democratic_acceptance = 2
-				neutrality_acceptance = 2
+				compliance_growth = 0.01
 				lend_lease_tension = -0.05
 				consumer_goods_factor = -0.01
 			}
 		}
 		level = {
 			modifier = {
-				civilian_intel_factor = 0.1
-				fascism_acceptance = 2
-				communism_acceptance = 2
-				democratic_acceptance = 2
-				neutrality_acceptance = 2
+				civilian_intel_factor = 0.05
+				compliance_growth = 0.01
 				lend_lease_tension = -0.05
 				consumer_goods_factor = -0.01
 			}
 		}
 		level = {
 			modifier = {
-				civilian_intel_factor = 0.1
-				fascism_acceptance = 2
-				communism_acceptance = 2
-				democratic_acceptance = 2
-				neutrality_acceptance = 2
+				civilian_intel_factor = 0.05
+				compliance_growth = 0.01
 				lend_lease_tension = -0.05
 				consumer_goods_factor = -0.01
 			}
 		}
 		level = {
 			modifier = {
-				civilian_intel_factor = 0.1
-				fascism_acceptance = 2
-				communism_acceptance = 2
-				democratic_acceptance = 2
-				neutrality_acceptance = 2
+				civilian_intel_factor = 0.05
+				compliance_growth = 0.01
 				lend_lease_tension = -0.05
 				consumer_goods_factor = -0.01
 			}
@@ -672,7 +660,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				army_intel_factor = 0.1
+				army_intel_factor = 0.05
 				max_planning = 0.02
 				special_forces_cap = 0.01
 				planning_speed = 0.02
@@ -680,7 +668,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				army_intel_factor = 0.1
+				army_intel_factor = 0.05
 				max_planning = 0.02
 				special_forces_cap = 0.01
 				planning_speed = 0.02
@@ -688,7 +676,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				army_intel_factor = 0.1
+				army_intel_factor = 0.05
 				max_planning = 0.02
 				special_forces_cap = 0.01
 				planning_speed = 0.02
@@ -766,7 +754,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				navy_intel_factor = 0.1
+				navy_intel_factor = 0.05
 				naval_coordination = 0.02
 				positioning = 0.02
 				spotting_chance = 0.02
@@ -774,7 +762,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				navy_intel_factor = 0.1
+				navy_intel_factor = 0.05
 				naval_coordination = 0.02
 				positioning = 0.02
 				spotting_chance = 0.02
@@ -782,7 +770,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				navy_intel_factor = 0.1
+				navy_intel_factor = 0.05
 				naval_coordination = 0.02
 				positioning = 0.02
 				spotting_chance = 0.02
@@ -850,7 +838,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				airforce_intel_factor = 0.1
+				airforce_intel_factor = 0.05
 				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
 				air_superiority_detect_factor = 0.02
@@ -858,7 +846,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				airforce_intel_factor = 0.1
+				airforce_intel_factor = 0.05
 				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
 				air_superiority_detect_factor = 0.02
@@ -866,7 +854,7 @@ branch_operation = { #TALLeis - re-branded as "Department Expansions"
 		}
 		level = {
 			modifier = {
-				airforce_intel_factor = 0.1
+				airforce_intel_factor = 0.05
 				air_intercept_efficiency = 0.02
 				air_strategic_bomber_bombing_factor = 0.01
 				air_superiority_detect_factor = 0.02
@@ -1106,30 +1094,40 @@ branch_operative = { #TALLeis - re-branded as "Agency Disciplines"
 		level = {
 			modifier = {
 				own_operative_detection_chance = -0.05
-				airforce_intel_to_others = -5
-				civilian_intel_to_others = -5
-				navy_intel_to_others = -5
-				army_intel_to_others = -5
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
 			}
 		}
 		
 		level = {
 			modifier = {
 				own_operative_detection_chance = -0.05
-				airforce_intel_to_others = -5
-				civilian_intel_to_others = -5
-				navy_intel_to_others = -5
-				army_intel_to_others = -5
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
+			}
+		}
+
+		level = {
+			modifier = {
+				own_operative_detection_chance = -0.05
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
 			}
 		}
 		
 		level = {
 			modifier = {
 				crypto_strength = 1
-				airforce_intel_to_others = -5
-				civilian_intel_to_others = -5
-				navy_intel_to_others = -5
-				army_intel_to_others = -5
+				airforce_intel_to_others = -10
+				civilian_intel_to_others = -10
+				navy_intel_to_others = -10
+				army_intel_to_others = -10
 			}
 		}
 	}
