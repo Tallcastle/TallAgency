@@ -1,55 +1,77 @@
-	-Expanded Intelligence Service-
+-The Agency-
+A partial rework of the HOI4's Espionage system
+    [*]Larger Pool of Operatives
+    [*]More Opportunities to Gain Operatives
+    [*]Re-worked Agency Upgrade System
+    [*]New Operative Traits
+    [*]Re-Balanced Operations & Missions
 
-these changes where initially crafted as part of a larger (and far more ambitious) mod.
-After loosing hundreds of hours of work due to nonsense with paradox updates corrupting my work in the past, I've elected to make a variety of smaller “bite-sized” mods broken down by theme.
+Current Version 1.3
 
-This should help with testing for balance and bugs, and will make these available to those interested in them without the need to tolerate other adjustments subscribers don't want in their game.
+-------------------
+I (and from what I can tell many players) was never really happy with how the espionage system turned out.  Always seamed it lacked effectiveness, too much effort for too little gain.  Always seemed the limited number of operatives available, the crippling effect of having one captured or injured early on, and the grueling work needed to build an agency in any way worthwhile, made the 'Spy' system for HOI4 come across as 'Lackluster.' 
 
-These mods are to be provided for free, if you paid for it YOU HAVE BEEN RIPPED OFF!
+This mod is a major re-write of the espionage system.  An attempt to make Espionage something more than a 'Trivial Waste" or a 'Useless Time Sink.'  That said, allot of effort was put into making these changes balanced and fair, nothing should be too overpowered and the AI has also been modded to use the new agency system effectively.
+-------------------
+--New Traits--
+-Operative Traits-
+    [*]“Revolutionary” - Boost Ideology, Stage Coup, & Prepare Collaboration, Effects +25%
+    [*]“Insurgent” - Sabotage, Strengthen Resistance, & Resistance Contacts (Risk, Cost, & Efficiency all +/-15%
+    [*]“Web of Lies” - Intel Network Strength Gain Factor +30%
+    [*]“Spyhunter” - Operative Capture/Detection & intel Network Gain +/- 10%
+    [*]“Scientist” - Capture Cipher & Steal Blueprint (Risk & Effectiveness) +/- 15%
+    [*]Vanilla “Linguist” - Trait is fixed and now works properly
 
-Anyone can use them in their own mod if you like, you don't need my permission to do so.
+-New Political Advisor Traits-
+20 new espionage, resistance, and special operations themed advisers have been added, several with new traits.
+    [*]“Spy Hunter” - (UK only) enemy operative detection/capture/intel extraction rate +15%
+    [*]“Spymaster” - (Turkey and All Majors except USA ) enemy operative detection/capture/intel extraction rate +15%
+    [*]“Spec-Ops Instructor” - (UK only) Spec-Ops Attack +10%, Spec-Ops Capacity and Operative Commando trait chance +20%
+    [*]“Heart of Iron” - (GER only) various effects themed to fighting resistance and gaining more from conquered territory at the expense of stability and population. (it's possible some effects require the BoTB DLC to function)
+    [*] - “Sniper Adherent” - (for FIN & SOV) Army attack/defense & Spec-Ops attack/capacity +5%, Army Recon effect +15%
+--Agency Branch Upgrades Re-Work--
+The agency branches and upgrades have been completely redesigned from the ground up.  Nearly everything has been changed.  These changes include extensive AI weights to make computer controlled nations use the system intelligently
+-New Operations System-
+All existing operations have been redesigned.  Costs and effectiveness of most have been reduced by 20~50% to balance the increased mission tempo against a larger pool of operatives.  Additionally, most operations are now chained with other operations and upgrades.  Agent Missions now require a fair amount of build up that, once done, can be done very frequently.
 
-If you DO use any of my work, I only ask for 2 things.
+To perform an operation (such as sabotage, tech theft) the appropriate infiltration mission must first be completed.  Each infiltration mission requires the appropriate Agency upgrade.  While infiltration missions have a larger than normal time investment (~120 days on average) the subsequent ones, (fake intel, sabotage, etc...) average around ~45 days.
 
-1. Credit me in your mod.
-2. Friend Request, then Message me via Steam chat to let me know, I would love to see your work.
+Additionaly, the New and quick “Prep Sabotage Operation” needs to be complete to perform any sabotage.  And sabotage operations (with one exception) no longer remove branch infiltration.
+-Other Changes-
+    [*]An additional operative slot is gained for every 4 agency upgrades to a max of 8.
+    [*]Max number of operatives raised to 16, this number possible via Industry, Faction members, and advisors.
+    [*]Max level of operatives raised from 2 to 5
+    [*]Increased chances of new operatives starting with traits
+    [*]“Regional Training Centers” now part of having an agency and no longer requires the “Local Training Centers” Upgrade.
+    [*]Various Balance changes – reduced effectiveness of agent missions by between 10~30%
+    [*]Strength of contribution operatives add when Stacked (working together) increased 10~20%
+    [*]Operative XP gain +10~20%
+    [*]Operatives now gain XP (a very small amount) from maintaining a quiet intel network
+    [*]Base Network Strength Loss Rate Reduced by 10%
+    [*]Slightly Increased the effectiveness of overlapping radar and wings of recon planes when accumulating Intel.
+    [*]All Economy and Industry Laws now have an effect on Intel revealed to other nations.
+    [*]Russian Localization 
+    [*]CSRZ's mod Realistic & Immersive Intelligence Agency Emblems.  Has been fully integrated into this mod.
+    [*]A “Foreign Assets” Tracking window added to keep track of infiltration assets. (Taken from the “Black Ice” mod)
+-------------------
+--Merge Mods--
+    [*]The Road to 56' is Complete! and can be found at https://steamcommunity.com/sharedfiles/filedetails/?id=2391949854
+    [*]Kaiserreich is Complete! and can be found at https://steamcommunity.com/sharedfiles/filedetails/?id=2393015405
+--Language Support--
+    [*]Chinese Localisation by IndelibleGlacier can be found at https://steamcommunity.com/sharedfiles/filedetails/?id=2395023101
+    [*]Another Russian Localisation (I think) by Skaor can be found at https://steamcommunity.com/sharedfiles/filedetails/?id=2393863269
+--Special Thanks--
+Donald Mc'D – incorporated Russian localization
+CSRZ's - for allowing me to incorporate his mod into "The Agency." wonderful work dude. (can be found at https://steamcommunity.com/profiles/76561198971143302)
+Several other members of the community that have offered help and support but wish to remain autonomous.
 
-	-The Mod-
-
-This mod includes changes and balance adjustments to the limited espionage system.  The number of total agents is doubled, experience gain from operative actions has been slightly increased, and the effectiveness of most missions and operations has been reduced by between 30-50%
-
-
-	Base Change Log
-	v0.1
-- Slightly increased chances of new operatives starting with 1 or more personality or basic traits
-- Number of agency upgrades needed for new operative slots reduced from 5 to 4
-- Maximum number of operatives increased from 10 to 16
-- Number of operatives that can be gained from upgraded agency increased from 1 to 8
-- Reduced base network strength loss rate by 10%
-- Strength of operative missions reduced by 10~20%
-- Strength of contribution operatives add when stacked and working together increased 10~20%
-- Slightly increased operative XP gain (10~20%)
-- Operatives now gain XP (a very small amount) from maintaining a quiet intel network
-- Radically changed how spymasters gain operatives from faction members (slight to moderate increase)
-- Slightly increased the effectiveness of overlapping radar and recon planes when accumulating Intel.
-- Added new agency branch upgrade “Internal Security” with 4 ranks
-- 'Localized Training Centers' moved to Intelligence, adjusted to ½ price and power but with 4 levels
-- Various operations reduced in strength by ~20% (steel tech, colab govern, sabotage, etc...)
-- New spy Trait: “Revolutionary” boost ideology, stage coup, & prepare collaboration gov, effects +25%
-- New Spy Trait: “Web of Lies” intel network strength gain factor +25%
-- New spy Trait: “Insurgent sabotage, strengthen resistance, & resistance contacts risk, cost, and efficiency all +/-15%
-- New spy Trait: “Scientist” Capture Cipher & Steal Blueprint risk Risk & Effectiveness +/- 15%
-
-	v0.12
-- Foreign recruitment no longer relies on 'Localized Training Centers' upgrade (Causing Bug)
-- fixed localization errors.
-
-	v0.2
-- Added x2 levels to Army/Navy/Airforce/Economy department upgrades each with additional +20% intelligence 
-- Re-named x3 agency upgrade categories (Department Upgrades, Domestic Operations, & Foreign Operations)
-- Added new agency branch upgrade “Communications Security” with 4 ranks designed to counter new department upgrade levels
-- Replaced 'Portable radios' with branch upgrade “Communications Protocol” with x2 levels each increases the mostly useless Coordinated strike effectiveness with additional +10% 'intel network strength gain factor'
-- “Illusive Gentleman” political advisor trait changed to +2 operative slots, -10% agency upgrade time, & +10% Operation Effectiveness
-
-	v0.3
-PENDING
+You guys are awesome, thank you.
+-------------------
+Q: "Can I use stuff in this mod in my own?"
+    A: Sure!  Be my guest.  All I ask is that you 1. credit me in your mod and 2. send me a friend request, then Message me via Steam chat to let me know, I would love to see your work.
+Q: "Will you be expanding this mod in the future?"
+    A: This is basically done at this point.  If new opportunities come by with future DLC or some other improvement strikes my fancy, I may come back to this.  But other than general bug fixes and future DLC comparability updates, this should be the last content release.
+Q: "How about fixing *insert other 'La Résistance' bug here*?"
+    A: Its doubtful, but possible.  If i stumble across a fix for something, or find one really needs fixing, then I'll pound one down here and there.
+Q: "Could you add *Insert Here" Feature?"
+    A: Don't know.  Make any suggestions in the discussion section in the workshop.  If I spot one I like I just may do that.

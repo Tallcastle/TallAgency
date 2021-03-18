@@ -138,29 +138,10 @@ leader_traits = {
 			}
 		}
 	}
-#TALLeis - taken from the R56 mod
-	operative_linguist = {
-		type = operative
-		trait_type = basic_trait
-
-		cost = 400
-		gain_xp_leader = {
-			NOT = { operative_leader_mission = no_mission }
-			NOT = { has_nationality = FROM }
-		}
-		new_commander_weight = {
-			base = 1
-			modifier = {
-				FROM = {
-					has_country_flag = upgrade_linguistic_training_flag
-				}
-				factor = 2
-			}
-		}
-		modifier = {
-			# something good
-		}
-	}
+#TALLeis - taken from the R56 mod - changes moved to 00_traits
+#	operative_linguist = {
+#		type = operative
+#	}
 
 	operative_spyhunter = {
 		type = operative

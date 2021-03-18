@@ -3,14 +3,12 @@ ideas = {
 	country = {
 	}
 	
-	
-	
-	
 	political_advisor = {
 
 		ENG_eric_roberts = {
 			allowed = {
 				original_tag = ENG
+				has_intelligence_agency = yes
 			}
 			traits = { spy_hunter }
 		}
@@ -176,6 +174,7 @@ ideas = {
 		USA_william_n_elizebeth_friedman = {
 			allowed = {
 				original_tag = USA
+				has_intelligence_agency = yes
 			}
 			
 			traits = { mastermind_code_cracker }
@@ -297,7 +296,7 @@ ideas = {
 			available = {
 				has_intelligence_agency = yes
 				has_completed_focus = USA_first_special_service_force
-				has_completed_focus = USA_fund_the_navy
+				has_completed_focus = USA_expand_the_USMC
 			}
 			
 			cost = 250
